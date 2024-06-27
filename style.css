@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    #402e7a,
+    #4c3bcf,
+    #4b70f5,
+    #3dc2ec,
+    aliceblue
+  );
+  animation: move 5s infinite;
+  background-size: 320% 600%;
+  height: 100vh;
+  width: 100%;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 1rem;
+  transform: all 0.3s ease-in;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: 300ms ease-in-out;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.header {
+  text-align: center;
+  margin: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+.header img {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+.card-wrapper:hover .header h2 {
+  color: #4b70f5;
+  transform: scale(1.1);
+  letter-spacing: 2;
+}
+.card-details {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+}
+
+.card-details p {
+  padding: 0.6rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #d5d5d5;
+}
+.card-details P:hover {
+  border: 2px solid #4b70f5;
+  border-radius: 10px;
+}
+
+.nocheck {
+  color: orangered;
+}
+
+.check {
+  color: #4b70f5;
+}
+.card-price {
+  margin-top: 20px;
+}
+.card-price p {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.card-btn {
+  margin-top: 25px;
+  padding: 0.6rem 3rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #4b70f5;
+  color: aliceblue;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-btn:hover {
+  background-color: transparent;
+  border: 2px solid #4b70f5;
+  color: #4b70f5;
+}
+
+.card-btn:active {
+  transform: scale(0.9);
+}
